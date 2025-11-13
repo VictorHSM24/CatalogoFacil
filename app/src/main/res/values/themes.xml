@@ -5,5 +5,15 @@
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
     </style>
 
-    <style name="Theme.CatalogoFacil" parent="Base.Theme.CatalogoFacil" />
+    <style name="Theme.CatalogoFacil" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <item name="android:windowActivityTransitions">true</item>
+        <item name="android:windowContentTransitions">true</item>
+    </style>
+
+    <style name="Theme.CatalogoFacil.NoActionBar" parent="Theme.CatalogoFacil">
+        <item name="windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+    </style>
+
+
 </resources>

@@ -13,19 +13,27 @@
         android:theme="@style/Theme.CatalogoFacil">
         <activity
             android:name=".ui.VisualizarPedidosActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/Theme.CatalogoFacil.NoActionBar" />
+
         <activity
             android:name=".ui.CadastroPedidoActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/Theme.CatalogoFacil.NoActionBar" />
+
         <activity
-            android:name=".ui.MainActivity"
+            android:name=".ui.SplashActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity
+            android:name=".ui.MainActivity"
+            android:exported="false"
+            android:theme="@style/Theme.CatalogoFacil.NoActionBar" />
     </application>
 
 </manifest>

@@ -1,88 +1,97 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="vertical"
-    android:padding="16dp"
-    android:layout_marginBottom="8dp"
-    android:background="@color/white"
-    android:elevation="2dp">
-
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp">
-
-        <TextView
-            android:id="@+id/tvCodigo"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentStart="true"
-            android:text="Código: R001"
-            android:textSize="16sp"
-            android:textStyle="bold"
-            android:textColor="@color/texto_icones"/>
-
-        <TextView
-            android:id="@+id/tvSituacaoPagamento"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
-            android:text="Pagamento: Não Pago"
-            android:textSize="16sp"
-            android:textStyle="bold"
-            android:textColor="@color/status_negativo"/>
-    </RelativeLayout>
-
-    <TextView
-        android:id="@+id/tvNomeRoupa"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Roupa: Vestido Primavera"
-        android:textColor="@color/texto_icones"
-        android:layout_marginBottom="4dp"/>
+    android:layout_marginHorizontal="4dp"
+    android:layout_marginTop="8dp"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="4dp"
+    app:cardBackgroundColor="@color/white">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginBottom="8dp">
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp">
+
+            <TextView
+                android:id="@+id/tvCodigo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:text="Código: R001"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/texto_icones"/>
+
+            <TextView
+                android:id="@+id/tvSituacaoPagamento"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:text="Pagamento: Status"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/status_negativo"/>
+        </RelativeLayout>
 
         <TextView
-            android:id="@+id/tvDetalhesRoupa"
-            android:layout_width="0dp"
+            android:id="@+id/tvNomeRoupa"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Cor/Tamanho: Azul / M"
+            android:text="Roupa: Nome do Item"
+            android:textColor="@color/texto_icones"
+            android:layout_marginBottom="4dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="8dp">
+
+            <TextView
+                android:id="@+id/tvDetalhesRoupa"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Cor/Tamanho: X / Y"
+                android:textColor="@color/texto_icones"/>
+
+            <TextView
+                android:id="@+id/tvQuantidade"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:text="Qtd: Z"
+                android:textColor="@color/texto_icones"/>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/fundo_base"
+            android:layout_marginVertical="4dp"/>
+
+        <TextView
+            android:id="@+id/tvNomeCliente"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Cliente: Nome do Cliente"
             android:textColor="@color/texto_icones"/>
 
         <TextView
-            android:id="@+id/tvQuantidade"
-            android:layout_width="0dp"
+            android:id="@+id/tvTelefone"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="0.5"
-            android:text="Qtd: 2"
+            android:text="Telefone: (00) 00000-0000"
             android:textColor="@color/texto_icones"/>
+
     </LinearLayout>
-
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="@color/fundo_base"
-        android:layout_marginVertical="4dp"/>
-
-    <TextView
-        android:id="@+id/tvNomeCliente"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Cliente: Maria Silva"
-        android:textColor="@color/texto_icones"/>
-
-    <TextView
-        android:id="@+id/tvTelefone"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Telefone: (66) 99999-9999"
-        android:textColor="@color/texto_icones"/>
-
-</LinearLayout>
+</androidx.cardview.widget.CardView>

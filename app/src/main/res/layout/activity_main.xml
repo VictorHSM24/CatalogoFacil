@@ -3,23 +3,41 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:padding="32dp"
     android:gravity="center"
     android:background="@color/fundo_base"
     tools:context=".ui.MainActivity">
 
-    <TextView
-        android:id="@+id/textViewTitle"
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Catalogo Fácil"
-        android:textSize="32sp"
-        android:textStyle="bold"
-        android:textColor="@color/texto_icones"
-        android:layout_marginBottom="64dp"/>
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_marginBottom="64dp">
 
-    <Button
+        <ImageView
+            android:id="@+id/imageViewLogo"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:src="@drawable/ic_logo"
+            android:transitionName="logoTransition"
+            android:layout_marginBottom="8dp"
+            android:contentDescription="Logomarca Catalogo Fácil" />
+
+        <TextView
+            android:id="@+id/textViewTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Catalogo Fácil"
+            android:textSize="32sp"
+            android:textStyle="bold"
+            android:textColor="@color/texto_icones"/>
+
+    </LinearLayout>
+
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/buttonCadastrarPedido"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -28,9 +46,10 @@
         android:padding="16dp"
         android:backgroundTint="@color/primaria"
         android:textColor="@color/white"
+        app:cornerRadius="8dp"
         android:layout_marginBottom="24dp"/>
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/buttonVisualizarPedidos"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -38,6 +57,7 @@
         android:textSize="18sp"
         android:padding="16dp"
         android:backgroundTint="@color/primaria"
-        android:textColor="@color/white"/>
+        android:textColor="@color/white"
+        app:cornerRadius="8dp" />
 
 </LinearLayout>
