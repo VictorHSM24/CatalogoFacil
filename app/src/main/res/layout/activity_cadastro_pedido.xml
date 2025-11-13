@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fundo_base"
+    tools:context=".ui.CadastroPedidoActivity"> <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="24dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Novo Pedido"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:textColor="@color/texto_icones"
+        android:layout_marginBottom="24dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Detalhes da Roupa"
+        android:textSize="18sp"
+        android:textStyle="italic"
+        android:textColor="@color/texto_icones"
+        android:layout_marginTop="8dp"/>
+
+    <EditText
+        android:id="@+id/editCodigoRoupa"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Código da Roupa (Ex: R001)"
+        android:inputType="text"
+        android:textColor="@color/texto_icones"
+        android:layout_marginBottom="16dp"/>
+
+    <EditText
+        android:id="@+id/editNomeRoupa"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nome da Roupa (Ex: Vestido Floral)"
+        android:inputType="textCapWords"
+        android:textColor="@color/texto_icones"
+        android:layout_marginBottom="16dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cor:"
+        android:textColor="@color/texto_icones"/>
+    <Spinner
+        android:id="@+id/spinnerCor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:spinnerMode="dropdown"
+        android:backgroundTint="@color/secundaria"
+        android:padding="8dp"
+        android:layout_marginBottom="16dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tamanho:"
+        android:textColor="@color/texto_icones"/>
+    <Spinner
+        android:id="@+id/spinnerTamanho"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:spinnerMode="dropdown"
+        android:backgroundTint="@color/secundaria"
+        android:padding="8dp"
+        android:layout_marginBottom="16dp"/>
+
+    <EditText
+        android:id="@+id/editQuantidade"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Quantidade"
+        android:inputType="number"
+        android:textColor="@color/texto_icones"
+        android:layout_marginBottom="24dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Detalhes do Cliente"
+        android:textSize="18sp"
+        android:textStyle="italic"
+        android:textColor="@color/texto_icones"
+        android:layout_marginTop="8dp"/>
+
+    <EditText
+        android:id="@+id/editNomeCliente"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nome do Cliente"
+        android:inputType="textPersonName"
+        android:textColor="@color/texto_icones"
+        android:layout_marginBottom="16dp"/>
+
+    <EditText
+        android:id="@+id/editTelefone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Telefone (Com DDD)"
+        android:inputType="phone"
+        android:textColor="@color/texto_icones"
+        android:layout_marginBottom="24dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Situação do Pagamento:"
+        android:textColor="@color/texto_icones"/>
+
+    <Spinner
+        android:id="@+id/spinnerSituacaoPagamento"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:spinnerMode="dropdown"
+        android:backgroundTint="@color/secundaria"
+        android:padding="8dp"
+        android:layout_marginBottom="32dp"/>
+
+    <Button
+        android:id="@+id/buttonSalvarPedido"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Salvar Pedido"
+        android:textSize="18sp"
+        android:padding="16dp"
+        android:backgroundTint="@color/primaria"
+        android:textColor="@color/white"
+        android:layout_marginBottom="16dp"/>
+
+    <Button
+        android:id="@+id/buttonVoltarInicial"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Voltar ao Menu Principal"
+        android:padding="12dp"
+        android:backgroundTint="@color/secundaria"
+        android:textColor="@color/white"/>
+
+</LinearLayout>
+</ScrollView>

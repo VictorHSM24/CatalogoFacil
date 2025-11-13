@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "344519886406",
+    "project_id": "catalogofacil-665a6",
+    "storage_bucket": "catalogofacil-665a6.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:344519886406:android:b84fef04e37c12cdbe6c47",
+        "android_client_info": {
+          "package_name": "com.example.catalogofacil"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDO-S_6pCXobAmUkYsjKto_yIzjLO13XJ0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
