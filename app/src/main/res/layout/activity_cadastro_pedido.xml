@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/fundo_base"
+    android:fitsSystemWindows="true"
     tools:context=".ui.CadastroPedidoActivity">
 
     <LinearLayout
@@ -48,24 +49,41 @@
                     android:textSize="18sp"
                     android:textStyle="bold" />
 
-                <EditText
-                    android:id="@+id/editCodigoRoupa"
+                <!-- CAMPO 1: CÓDIGO DA ROUPA (OUTLINED) -->
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="16dp"
-                    android:hint="Código da Roupa (Ex: R001)"
-                    android:inputType="text"
-                    android:textColor="@color/texto_icones" />
+                    app:hintTextColor="@color/hint_cinza">
 
-                <EditText
-                    android:id="@+id/editNomeRoupa"
+                    <EditText
+                        android:id="@+id/editCodigoRoupa"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Código da Roupa (Ex: R001)"
+                        android:inputType="text"
+                        android:textColor="@color/texto_icones" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- CAMPO 2: NOME DA ROUPA (OUTLINED) -->
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="16dp"
-                    android:hint="Nome da Roupa (Ex: Vestido Floral)"
-                    android:inputType="textCapWords"
-                    android:textColor="@color/texto_icones" />
+                    app:hintTextColor="@color/hint_cinza">
 
+                    <EditText
+                        android:id="@+id/editNomeRoupa"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Nome da Roupa (Ex: Vestido Floral)"
+                        android:inputType="textCapWords"
+                        android:textColor="@color/texto_icones" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- SPINNER COR (Sem alteração no layout) -->
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -80,6 +98,7 @@
                     android:padding="8dp"
                     android:spinnerMode="dropdown" />
 
+                <!-- SPINNER TAMANHO (Sem alteração no layout) -->
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -94,14 +113,22 @@
                     android:padding="8dp"
                     android:spinnerMode="dropdown" />
 
-                <EditText
-                    android:id="@+id/editQuantidade"
+                <!-- CAMPO 3: QUANTIDADE (OUTLINED) -->
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="8dp"
-                    android:hint="Quantidade"
-                    android:inputType="number"
-                    android:textColor="@color/texto_icones" />
+                    app:hintTextColor="@color/hint_cinza">
+
+                    <EditText
+                        android:id="@+id/editQuantidade"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Quantidade"
+                        android:inputType="number"
+                        android:textColor="@color/texto_icones" />
+                </com.google.android.material.textfield.TextInputLayout>
 
             </LinearLayout>
         </androidx.cardview.widget.CardView>
@@ -130,24 +157,41 @@
                     android:textSize="18sp"
                     android:textStyle="bold" />
 
-                <EditText
-                    android:id="@+id/editNomeCliente"
+                <!-- CAMPO 4: NOME DO CLIENTE (OUTLINED) -->
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="16dp"
-                    android:hint="Nome do Cliente"
-                    android:inputType="textPersonName"
-                    android:textColor="@color/texto_icones" />
+                    app:hintTextColor="@color/hint_cinza">
 
-                <EditText
-                    android:id="@+id/editTelefone"
+                    <EditText
+                        android:id="@+id/editNomeCliente"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Nome do Cliente"
+                        android:inputType="textPersonName"
+                        android:textColor="@color/texto_icones" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- CAMPO 5: TELEFONE (OUTLINED) -->
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="24dp"
-                    android:hint="Telefone (Com DDD)"
-                    android:inputType="phone"
-                    android:textColor="@color/texto_icones" />
+                    app:hintTextColor="@color/hint_cinza">
 
+                    <EditText
+                        android:id="@+id/editTelefone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Telefone (Com DDD)"
+                        android:inputType="phone"
+                        android:textColor="@color/texto_icones" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- SPINNER PAGAMENTO (Sem alteração no layout) -->
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -163,7 +207,6 @@
 
             </LinearLayout>
         </androidx.cardview.widget.CardView>
-
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/buttonSalvarPedido"
@@ -182,13 +225,13 @@
             style="@style/Widget.MaterialComponents.Button.TextButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
             android:padding="12dp"
             android:text="Voltar ao Menu Principal"
             android:textColor="@color/secundaria"
             app:cornerRadius="8dp"
             app:strokeColor="@color/secundaria"
-            app:strokeWidth="1dp"
-            android:layout_marginBottom="16dp"/>
+            app:strokeWidth="1dp" />
 
     </LinearLayout>
 </ScrollView>

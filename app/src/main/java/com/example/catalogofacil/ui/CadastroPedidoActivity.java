@@ -69,6 +69,8 @@ public class CadastroPedidoActivity extends AppCompatActivity {
     }//onCreate
 
     private void setupSpinners() {
+        int selectedItemLayout = R.layout.spinner_text;
+
         List<String> cores = new ArrayList<>();
         cores.add("Selecione a Cor");
         cores.add("Branco");
@@ -76,7 +78,8 @@ public class CadastroPedidoActivity extends AppCompatActivity {
         cores.add("Vermelho");
         cores.add("Azul");
         cores.add("Outra...");
-        ArrayAdapter<String> corAdapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, cores);
+
+        ArrayAdapter<String> corAdapter = new ArrayAdapter<>(this, selectedItemLayout, cores);
         corAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinnerCor.setAdapter(corAdapter);
 
@@ -88,15 +91,15 @@ public class CadastroPedidoActivity extends AppCompatActivity {
         tamanhos.add("M");
         tamanhos.add("P");
         tamanhos.add("PP");
-        ArrayAdapter<String> tamanhoAdapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, tamanhos);
+
+        ArrayAdapter<String> tamanhoAdapter = new ArrayAdapter<>(this, selectedItemLayout, tamanhos);
         tamanhoAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinnerTamanho.setAdapter(tamanhoAdapter);
-
         List<String> situacoes = new ArrayList<>();
         situacoes.add("Selecione a Situação");
         situacoes.add("Pago");
         situacoes.add("Não Pago");
-        ArrayAdapter<String> situacaoAdapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, situacoes);
+        ArrayAdapter<String> situacaoAdapter = new ArrayAdapter<>(this, selectedItemLayout, situacoes);
         situacaoAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinnerSituacaoPagamento.setAdapter(situacaoAdapter);
     }//setupSpinners
